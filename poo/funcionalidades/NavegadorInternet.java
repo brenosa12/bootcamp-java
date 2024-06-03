@@ -1,4 +1,4 @@
-package poo;
+package poo.funcionalidades;
 
 public interface NavegadorInternet {
     public  void exibirPagina(String url);

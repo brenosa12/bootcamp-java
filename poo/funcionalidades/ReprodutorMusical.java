@@ -1,4 +1,4 @@
-package poo;
+package poo.funcionalidades;
 
 public interface ReprodutorMusical {
     public void tocar();

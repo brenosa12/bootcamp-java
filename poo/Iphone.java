@@ -1,5 +1,9 @@
 package poo;
 
+import poo.funcionalidades.AparelhoTelefonico;
+import poo.funcionalidades.NavegadorInternet;
+import poo.funcionalidades.ReprodutorMusical;
+
 public class Iphone implements AparelhoTelefonico, NavegadorInternet, ReprodutorMusical{
     public void tocar() {
         System.out.println("TOCANDO A MUSICA");
