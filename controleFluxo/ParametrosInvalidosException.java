@@ -1,4 +1,4 @@
-package DesafioControleFluxo;
+package controleFluxo;
 
 public class ParametrosInvalidosException extends Exception{
 

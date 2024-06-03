@@ -1,4 +1,4 @@
-package DesafioControleFluxo;
+package controleFluxo;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ public class Contador {
         int parametro1 = scanner.nextInt();
         System.out.println("Digite o Segundo Pârametro:");
         int parametro2 = scanner.nextInt();
-
+        
         try{
             
            
