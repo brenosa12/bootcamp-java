@@ -1,40 +1,16 @@
 package Contas;
 
-public class contaCorrente implements conta {
-    private final String agencia;
-    private final int numero;
-    public double saldo;
+import Cliente.pessoa;
 
-    public String getAgencia() {
-        return agencia;
-    }
+public class contaCorrente extends conta {
 
-    public int getNumero() {
-        return numero;
-    }
 
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public contaCorrente(String agencia, int numero, double saldo) {
-        this.agencia = agencia;
-        this.numero = numero;
-        this.saldo = saldo;
-    }
-
-    @Override
-    public void sacar(double valor) {
-
-    }
-
-    @Override
-    public void depositar(double valor) {
-
+    public contaCorrente(int agencia, int numero, double saldo, pessoa Cliente) {
+        super(agencia, numero, saldo, Cliente);
     }
 
     @Override
     public void transferir(double valor, conta contaDestino) {
-
+        super.transferir(valor, contaDestino);
     }
 }
