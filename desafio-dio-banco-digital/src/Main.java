@@ -6,25 +6,32 @@ import Contas.contaPoupanca;
 
 public class Main {
     public static void main(String[] args) {
-        Cliente venilton = new Cliente("venilton",00200300112);
-        Cliente Breno = new Cliente("Breno",1453360112);
-        Cliente Josefa = new Cliente("Josefa",00500360112);
+        Cliente junior = new Cliente("Junior",00200300112);
+        Cliente breno = new Cliente("Breno",1453360112);
+        Cliente josefa = new Cliente("Josefa",00500360112);
+        Cliente adalberto = new Cliente("Adalberto",00500666122);
         Banco Digital = new Banco();
 
-        Conta cc = new contaCorrente(venilton);
-        Conta poupanca = new contaPoupanca(Breno);
-        cc.depositar(100);
-        cc.transferir(100, poupanca);
+        Conta ccJunior = new contaCorrente(junior);
+        Conta poupancaBreno = new contaPoupanca(breno);
+        ccJunior.depositar(100);
+        ccJunior.transferir(100, poupancaBreno);
 
-        cc.exibirExtrato();
-        poupanca.exibirExtrato();
+        ccJunior.exibirExtrato();
+        poupancaBreno.exibirExtrato();
+        poupancaBreno.exibirExtrato();
+        poupancaBreno.exibirExtrato();
+
+        Digital.adicionarContaCorrente(junior);
+        Digital.adicionarContaPoupanca(breno);
+        Digital.adicionarContaPoupanca(josefa);
+        Digital.adicionarContaCorrente(adalberto);
 
 
-        Digital.adicionarContaCorrente(venilton);
-        Digital.adicionarContaPoupanca(Breno);
         Digital.exibirContas();
-        cc.getCliente();
-        Digital.removerConta("venilton");
+        ccJunior.getCliente();
+        Digital.removerConta("Junior");
+        Digital.removerConta("Adalberto");
         System.out.println("=========");
         Digital.exibirContas();
 

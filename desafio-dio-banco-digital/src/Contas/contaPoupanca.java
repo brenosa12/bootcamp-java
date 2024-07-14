@@ -3,7 +3,7 @@ package Contas;
 import Client.Cliente;
 
 public class contaPoupanca extends Conta {
-    private int consultas = 0;
+    private int consultas = 2;
     private static final double rendimento = 0.1;
     public contaPoupanca(Cliente Cliente) {
         super( Cliente);
@@ -11,10 +11,10 @@ public class contaPoupanca extends Conta {
 
     @Override
     public void exibirExtrato() {
-        if ((consultas < 5)){
+        if ((consultas < 2)){
             consultas++;
         }
-        else if (consultas == 5){
+        else if (consultas == 2){
             saldo += saldo * rendimento;
             consultas = 0;
         }
