@@ -1,16 +1,36 @@
 package Contas;
 
-import Cliente.pessoa;
+import Client.Cliente;
 
-public class contaCorrente extends conta {
+import java.util.Random;
+
+public class contaCorrente extends Conta {
+    private Random chequeEspecial = new Random();
+    private int limite = chequeEspecial.nextInt(1500);
 
 
-    public contaCorrente(int agencia, int numero, double saldo, pessoa Cliente) {
-        super(agencia, numero, saldo, Cliente);
+    public contaCorrente(Cliente Cliente) {
+        super(Cliente);
+    }
+
+    public void consultarChequeEspecial(){
+        System.out.println(limite);
     }
 
     @Override
-    public void transferir(double valor, conta contaDestino) {
-        super.transferir(valor, contaDestino);
+    public void sacar(double valor) {
+
+        if (saldo > 0 & limite > 0) {
+            saldo -= valor;
+        }
+        else {
+            System.out.println("Voce nao possui Saldo suficente.");
+        }
+    }
+
+    @Override
+    public void exibirExtrato() {
+        super.exibirExtrato();
+        System.out.println("Saldo + Cheque Especial: " + (saldo + limite));
     }
 }
