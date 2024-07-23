@@ -16,7 +16,7 @@ public class Dev {
         this.nome = nome;
     }
 
-    public void inscrever(Bootcamp bootcamp){
+    public void inscreverBootcamp(Bootcamp bootcamp){
         this.conteudosIncritos.addAll(bootcamp.getConteudos());
         bootcamp.getDevs().add(this);
     }
@@ -33,11 +33,12 @@ public class Dev {
         }
     }
 
-    public double calcularTotalXp(){
-        return this.conteudosConcluidos
+    public void calcularTotalXp(){
+        double xp= this.conteudosConcluidos
                 .stream()
                 .mapToDouble(Conteudo::calcularXp)
                 .sum();
+        System.out.println("XP = "+ xp);
 
     }
 

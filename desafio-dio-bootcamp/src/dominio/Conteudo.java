@@ -2,9 +2,10 @@ package dominio;
 
 public abstract class Conteudo {
 
-    private String titulo;
-    private String descricao;
+    protected String titulo;
+    protected String descricao;
     protected static final double XP_INICIAL = 10;
+
 
     public abstract double calcularXp();
 
